@@ -1,0 +1,18 @@
+<view class="page">
+    <view class="page__bd page__bd_spacing">
+        <button class="weui-btn mini-btn" type="primary" size="mini">成功</button>
+        <button class="weui-btn mini-btn" type="primary" plain="true" size="mini">可选</button>
+        <button class="weui-btn mini-btn" type="default" plain="true" size="mini">预约</button>
+        <button class="weui-btn mini-btn" type="warn" plain="true" size="mini">有人</button>
+        <button class="weui-btn mini-btn" type="warn" size="mini">禁用</button>
+    </view>
+    <view class="page__bd page__bd_spacing" >
+        <block wx:for="{{seat}}" wx:key="{{index}}" >
+            <button wx:if="{{item.status==1}}" class="weui-btn mini-btn" bindtap="openConfirm" type="primary" size="mini">{{item.id}}</button>
+            <button wx:if="{{item.status==2}}" class="weui-btn mini-btn" bindtap="openConfirm" type="primary" plain="true" size="mini">{{item.id}}</button>
+            <button wx:if="{{item.status==3}}" class="weui-btn mini-btn" bindtap="openConfirm" type="default" plain="true" size="mini">{{item.id}}</button>
+            <button wx:if="{{item.status==4}}" class="weui-btn mini-btn" bindtap="openConfirm" type="warn" plain="true" size="mini">{{item.id}}</button>
+            <button wx:if="{{item.status==5}}" class="weui-btn mini-btn" bindtap="openConfirm" type="warn" size="mini">{{item.id}}</button>
+        </block>
+    </view>
+</view>
