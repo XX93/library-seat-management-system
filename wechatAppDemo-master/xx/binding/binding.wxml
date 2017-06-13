@@ -1,0 +1,10 @@
+<form bindsubmit="formSubmit" bindreset="formReset">
+    <view class="section">
+        <input placeholder="请输入您的学号" name="username" />
+    </view>
+
+    <view class="btn-area">
+        <button formType="submit">绑定</button>
+        <button formType="reset">重置</button>
+    </view>
+</form>
